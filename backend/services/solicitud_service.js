@@ -41,7 +41,7 @@ module.exports = {
 
   getSoliNumero: async function (req, res) {
     try {
-      const solicitudesPorId = await Solicitud.find({ idSolicitud: req.params.idSolicitud })
+      const solicitudesPorId = await Solicitud.find({ _id: req.params.idSolicitud }).populate('refCliente')
       if (solicitudesPorId.length === 0) {
         res.json({
           mensaje: `No se encontraron solicitudes con ese id: ${req.params.idSolicitud}`,
