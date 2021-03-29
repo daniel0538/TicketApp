@@ -46,7 +46,7 @@ class Menu extends React.Component {
             </ListItemIcon>
             <ListItemText primary="Reportar solicitud" />
           </ListItem>
-          <Divider />
+          <Divider id='divider'/>
           <FormControl component="div" className="form">
             <InputLabel component="label" htmlFor="grouped-select">
               Todos los proyectos

@@ -78,12 +78,10 @@ export default class CreateSolicitud extends React.Component {
     return (
       <div>
         <Header />
+        <div className='container-padre-envio'>
         <Menu />
-        <div className="title">
-          <p>Introduzca los detalles de la solicitud</p>
-        </div>
-        <form onSubmit={this.enviarSolicitud}>
-          <div className="container-p">
+          <div className="title"><p className=''>Introduzca los detalles de la solicitud</p></div>
+        <form className="container-p" onSubmit={this.enviarSolicitud}>
             <div className="container-a">
               <FormControl className="form-control">
                 <NativeSelect
@@ -208,12 +206,10 @@ export default class CreateSolicitud extends React.Component {
                 rows={4}
               />
             </div>
-          </div>
-          <div className="button">
-            <input type="submit" value="Enviar solicitud" />
-          </div>
+            <input className="button" type="submit" value="Enviar solicitud" />
         </form>
-      </div>
+        </div>
+        </div>
     );
   }
 }

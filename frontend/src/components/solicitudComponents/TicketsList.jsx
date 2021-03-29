@@ -11,9 +11,9 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import "./styles/lista.css";
-import Header from "./header";
-import Menu from "./menu";
+import "../styles/lista.css";
+import Header from "../header";
+import Menu from "../menu";
 
 export default class ListadeSolicitudes extends Component {
   constructor(props) {
@@ -42,12 +42,12 @@ export default class ListadeSolicitudes extends Component {
     return listaDeSolicitudes.map((sol) => (
       <TableRow key={sol.idSolicitud}>
         <TableCell align="center">{sol.idSolicitud}</TableCell>
-        <TableCell align="center">{sol.refCliente}</TableCell>
+        <TableCell align="center">{sol.refCliente.nombre}</TableCell>
         <TableCell align="center">{sol.estado}</TableCell>
         <TableCell align="center">{sol.prioridad}</TableCell>
         <TableCell align="center">{sol.resumen}</TableCell>
         <TableCell align="center">{sol.fechaHora}</TableCell>
-        <TableCell align="center">
+        <TableCell align="center" >
           <img
             alt="img"
             src="https://img.icons8.com/color/48/000000/list.png"
@@ -60,8 +60,9 @@ export default class ListadeSolicitudes extends Component {
     return (
       <div>
         <Header />
+        <div className='container-padre-lista'>
         <Menu />
-        <div id="container-padre">
+        <div id="container-acordion-padre">
           <Accordion className="acordion-h" component="div">
             <AccordionSummary
               expandIcon={<ExpandMoreIcon id="flecha" />}
@@ -93,6 +94,7 @@ export default class ListadeSolicitudes extends Component {
               </Typography>
             </AccordionDetails>
           </Accordion>
+        </div>
         </div>
       </div>
     );

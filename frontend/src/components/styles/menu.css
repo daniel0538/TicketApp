@@ -1,9 +1,9 @@
 .container{
   display: flex;
-  position: absolute;
   flex-wrap: wrap;
   flex-direction: column;
-  height: auto;
+  border-right: 1px solid rgba(128, 128, 128, 0.267);
+  height: 100%;
   width: auto;
 }
 
@@ -13,6 +13,12 @@
   font-size: 10px;
   width: 100%;
 }
+
+.container nav #divider{
+  display: flex;
+  width: 100%;
+}
+
 .form{
   display: flex; 
   height: 100px;

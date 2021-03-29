@@ -1,20 +1,26 @@
-#container-padre{
+.container-padre-lista{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 91.5%;
+}
+#container-acordion-padre{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 400px;
-    margin-top: 150px;
-    width: auto;
+    margin-top: 40px;
+    margin-left: 13%;
+    margin-right: 20px;
+    width: 50%;
 }
 .acordion-h{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
 }
 
 #typography{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
 }
